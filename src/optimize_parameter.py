@@ -46,10 +46,8 @@ def main():
 def objective(trial):
     length = trial.suggest_int('length', 14, 30, step=2)
     lr = trial.suggest_float('lr', 10**(-6), 0.1, log=True)
-    # hidden_dim = 8 * trial.suggest_int('hidden_dim / 8', 4, 128, log=True)
-    hidden_dim = 8 * trial.suggest_int('hidden_dim / 8', 1, 2, log=True)
-    # hopping_num = trial.suggest_int('hopping_num', 1, 6)
-    hopping_num = trial.suggest_int('hopping_num', 1, 2)
+    hidden_dim = 8 * trial.suggest_int('hidden_dim / 8', 4, 128, log=True)
+    hopping_num = trial.suggest_int('hopping_num', 1, 6)
     dropout_rate = trial.suggest_float('dropout_rate', 0.0, 0.3)
 
     # クラス重みを設定
