@@ -1,0 +1,74 @@
+[
+    {
+        "virus": "Zaire ebolavirus",
+        "location": ["Gene Symbol:VP40"],
+        "SLiM_proteins": ["VP40"],
+        "proteins": {"NP": ["NP", "nucleoprotein"],
+                     "L": ["L", "polymerase"],
+                     "GP": ["GP", "glycoprotein"],
+                     "VP24": ["VP24", "viral protein 24"],
+                     "VP30": ["VP30", "viral protein 30"],
+                     "VP35": ["VP35", "viral protein 35"],
+                     "VP40": ["VP40", "viral protein 40"]
+                    },
+        "SLiM": "LPTAPP",
+        "start_index": 6,
+        "end_index": 11,
+        "neighbor": null,
+        "replacement_tolerance": 1
+    },
+    {
+        "virus": "Lassa mammarenavirus",
+        "location": ["Protein Name:Z"],
+        "SLiM_proteins": ["Z"],
+        "proteins": {"NP": ["NP", "nucleoprotein"],
+                     "L": ["L", "polymerase"],
+                     "GPC": ["GPC", "glycoprotein"],
+                     "Z": ["Z"]
+                    },
+        "SLiM": "xPxAPx",
+        "start_index": 80,
+        "end_index": 85,
+        "neighbor": null,
+        "replacement_tolerance": 3
+    },
+    {
+        "virus": "Bluetongue virus",
+        "location": ["NS3"],
+        "SLiM_proteins": ["NS3"],
+        "proteins": {"NS1": ["NS1"],
+                     "NS2": ["NS2"],
+                     "NS3": ["NS3"],
+                     "VP1": ["VP1", "viral protein 1"],
+                     "VP2": ["VP2", "viral protein 2"],
+                     "VP3": ["VP3", "viral protein 3"],
+                     "VP4": ["VP4", "viral protein 4"],
+                     "VP5": ["VP5", "viral protein 5"],
+                     "VP6": ["VP6", "viral protein 6"],
+                     "VP7": ["VP7", "viral protein 7"]
+                    },
+        "SLiM": "APSAPM",
+        "start_index": 40,
+        "end_index": 45,
+        "neighbor": null,
+        "replacement_tolerance": 2
+    },
+    {
+        "virus": "Marburg virus",
+        "location": ["Gene Symbol:NP", "Protein Name:nucleoprotein"],
+        "SLiM_proteins": ["NP"],
+        "proteins": {"NP": ["NP", "nucleoprotein"],
+                     "L": ["L", "polymerase"],
+                     "GP": ["GP", "glycoprotein"],
+                     "VP24": ["VP24", "vp24", "viral protein 24"],
+                     "VP30": ["VP30", "vp30", "viral protein 30"],
+                     "VP35": ["VP35", "vp35", "viral protein 35"],
+                     "VP40": ["VP40", "vp40", "viral protein 40"]
+                    },
+        "SLiM": "SPSAPQ",
+        "start_index": 602,
+        "end_index": 607,
+        "neighbor": null,
+        "replacement_tolerance": 1
+    }
+]
