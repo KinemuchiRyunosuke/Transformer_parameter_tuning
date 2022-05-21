@@ -19,11 +19,12 @@ model_dir = models
 result_dir = reports/result
 
 INPUT = $(foreach virus,$(viruses),data/interim/$(virus).fasta)
-PROCESSED = $(foreach length,$(lengths),data/processed/length$(length)/)
+PROCESSED = $(foreach length,$(lengths),\
+		$(foreach virus,$(viruses),data/processed/length$(length)/$(virus).pickle))
 VOCAB_FILE = references/vocab.pickle
-TRAIN_TFRECORD = $(foreach length,$(lengths), \
+TRAIN_TFRECORD = $(foreach length,$(lengths),\
 		data/tfrecord/length$(length)/train_dataset.tfrecord)
-TEST_TFRECORD = $(foreach length,$(lengths), \
+TEST_TFRECORD = $(foreach length,$(lengths),\
 		data/tfrecord/length$(length)/test_dataset.tfrecord)
 STUDY = reports/result/study.pickle
 RESULT = reports/result/tuning_result.txt
@@ -31,8 +32,8 @@ RESULT = reports/result/tuning_result.txt
 all: $(STUDY)
 
 $(PROCESSED): $(INPUT)
-	mkdir -p $@
-	python3 -m src.make_dataset $@ $(fasta_dir) \
+	mkdir -p $(@D)
+	python3 -m src.make_dataset $(@D) $(fasta_dir) \
 		--n_gram $(n_gram)
 
 $(VOCAB_FILE): $(PROCESSED)
