@@ -7,6 +7,7 @@ import pickle
 
 from models.transformer import BinaryClassificationTransformer
 from features.preprocessing import load_dataset
+from utils import calc_f_beta_score
 
 
 # コマンドライン引数を取得
@@ -95,7 +96,13 @@ def objective(trial):
                         verbose=1
                         )
 
-    return max(history.history['val_precision'])
+    scores = []
+    for precision, recall in zip(history.history['val_precision'],
+                                 history.history['val_recall']):
+        f_bata_score = calc_f_beta_score(precision, recall, beta=0.5)
+
+    best_score = max(scores)
+    return best_score
 
 def create_model(lr, hopping_num, hidden_dim, dropout_rate):
     """ モデルを定義する """
