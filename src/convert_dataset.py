@@ -83,7 +83,7 @@ def main():
     x_train, y_train = underSampling(x_train, y_train,
                             sampling_strategy=sampling_strategy)
     x_test, y_test = underSampling(x_test, y_test,
-                            sampling_strategy=1.0)
+                            sampling_strategy=sampling_strategy)
 
     # シャッフル
     np.random.seed(1)

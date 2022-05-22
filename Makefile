@@ -1,4 +1,4 @@
-n_trials = 1
+n_trials = 100
 n_gram = True
 val_rate = 0.2
 num_words = 25
